@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>REQ-IT | Login</title>
+  <link rel="stylesheet" href="../styles/login.css">
+</head>
+<body>
+  <div class="login-container">
+    <h1>REQ-IT Login</h1>
+
+    <form id="loginForm">
+      <!-- Role selector -->
+      <label for="role">Login as:</label>
+      <select id="role" required>
+        <option value="student">Student</option>
+        <option value="registrar">Registrar</option>
+      </select>
+
+      <!-- Username -->
+      <input type="text" id="student number" placeholder="Student Number" required>
+
+      <!-- Password -->
+      <input type="password" id="password" placeholder="Password" required>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <p><a href="forgot-password.html">Forgot Password?</a></p>
+    <p>Don’t have an account? <a href="signup.html">Sign up</a></p>
+  </div>
+
+  <script src="../scripts/login.js"></script>
+</body>
+</html>

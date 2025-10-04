@@ -17,8 +17,8 @@
         <option value="registrar">Registrar</option>
       </select>
 
-      <!-- Username -->
-      <input type="text" id="student number" placeholder="Student Number" required>
+      <!-- ID field -->
+      <input type="text" id="userId" placeholder="Student Number" required>
 
       <!-- Password -->
       <input type="password" id="password" placeholder="Password" required>
@@ -30,6 +30,19 @@
     <p>Don’t have an account? <a href="signup.html">Sign up</a></p>
   </div>
 
+  <script>
+    // Switch placeholder depending on role
+    const roleSelect = document.getElementById("role");
+    const userIdInput = document.getElementById("userId");
+
+    roleSelect.addEventListener("change", () => {
+      if (roleSelect.value === "student") {
+        userIdInput.placeholder = "Student Number";
+      } else {
+        userIdInput.placeholder = "Staff ID";
+      }
+    });
+  </script>
   <script src="../scripts/login.js"></script>
 </body>
 </html>

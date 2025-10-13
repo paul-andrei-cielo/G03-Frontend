@@ -1,20 +1,28 @@
 import 'package:flutter/material.dart';
-import 'screens/register_screen.dart';
+import 'screens/login_screen.dart';
+import 'screens/register_screen.dart'; 
 
 void main() {
-  runApp(const RegistrarApp());
+  runApp(const MyApp());
 }
 
-class RegistrarApp extends StatelessWidget {
-  const RegistrarApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Student Portal',
       debugShowCheckedModeBanner: false,
-      title: 'Registrar Requesting App',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: const RegisterScreen(),
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+        fontFamily: 'Montserrat',
+      ),
+      home: const LoginScreen(),
+      routes: {
+        '/login': (context) => const LoginScreen(),
+        '/register': (context) => const RegisterScreen(),
+      },
     );
   }
 }
